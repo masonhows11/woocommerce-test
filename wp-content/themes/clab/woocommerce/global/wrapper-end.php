@@ -21,8 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = wc_get_theme_slug_for_templates();
 
-echo '</main></div>';
+echo '</div></div></section>';
 
+//echo '</main></div>';
 //switch ( $template ) {
 //	case 'twentyten':
 //		echo '</div></div>';
