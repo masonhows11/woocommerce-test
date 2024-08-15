@@ -94,5 +94,5 @@ function calb_comment($comment, $args, $depth)
 if(is_admin()){
     include CLAB_APP . 'admin/admin.php';
 }
-include CLAB_APP . 'user/user.php';
-
+include CLAB_APP .'user/user.php';
+include CLAB_PATH .'wc-customize.php';
