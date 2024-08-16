@@ -21,6 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = wc_get_theme_slug_for_templates();
 
+// placed woocommerce_sidebar here
+/**
+ * Hook: woocommerce_sidebar.
+ *
+ * @hooked woocommerce_get_sidebar - 10
+ */
+do_action( 'woocommerce_sidebar');
 echo '</div></div></section>';
 
 //echo '</main></div>';

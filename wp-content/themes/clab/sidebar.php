@@ -1,4 +1,4 @@
-<div class="col-lg-4">
+<div class="col-md-4">
     <?php if(is_active_sidebar('clab-blog-sidebar')): ?>
         <?php dynamic_sidebar('clab-blog-sidebar') ?>
     <?php endif; ?>
