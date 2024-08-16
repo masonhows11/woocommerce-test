@@ -58,6 +58,7 @@ add_action('woocommerce_after_shop_loop_item',function (){
 });
 
 add_action('woocommerce_before_main_content',function (){
+    // if not in single product page
     if(!is_product()){
         echo '<div class="row justify-content-center">';
     }
