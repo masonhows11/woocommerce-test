@@ -24,7 +24,7 @@ $heading = apply_filters( 'woocommerce_product_description_heading', __( 'Descri
 ?>
 
 <?php if ( $heading ) : ?>
-	<h2><?php echo esc_html( $heading ); ?></h2>
+<h4 class="mb-3"><?php echo esc_html( $heading ); ?></h4>
 <?php endif; ?>
 
 <?php the_content(); ?>
