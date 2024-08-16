@@ -91,6 +91,15 @@ function calb_comment($comment, $args, $depth)
     <?php
 
 }
+// to active comments for products
+add_filter( 'comments_open', 'woocommerce_ir_force_enable_reviews', 9999, 2 );
+function woocommerce_ir_force_enable_reviews( $enable, $post_id ) {
+   if ( 'product' === get_post_type( $post_id ) ) {
+      $enable = true;
+   }
+   return $enable;
+}
+
 if(is_admin()){
     include CLAB_APP . 'admin/admin.php';
 }
