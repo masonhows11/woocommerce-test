@@ -15,16 +15,35 @@
  * @version 9.0.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 // Note: `wc_get_gallery_image_html` was added in WC 3.3.2 and did not exist prior. This check protects against theme overrides being used on older versions of WC.
-if ( ! function_exists( 'wc_get_gallery_image_html' ) ) {
-	return;
+if (!function_exists('wc_get_gallery_image_html')) {
+    return;
 }
 
 global $product;
 
-$columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
+$gallery_ids = $product->get_gallery_image_ids();
+?>
+
+    <div class="owl-carousel owl-theme dot-style-1 nav-round" data-items="[1,1]" data-margin="30" data-autoplay="true" data-loop="true" data-nav="true" data-dots="true">
+
+        <?php foreach ($gallery_ids as $gallery_id): ?>
+        <?php $img_src = wp_get_attachment_url($gallery_id); ?>
+        <div class="item">
+            <a href="#" class="card border-0">
+                <img class="card-img rounded" src="<?php echo $img_src ?>" alt="card image"/>
+            </a>
+        </div>
+        <?php endforeach; ?>
+
+
+    </div>
+
+<?php
+
+/*$columns           = apply_filters( 'woocommerce_product_thumbnails_columns', 4 );
 $post_thumbnail_id = $product->get_image_id();
 $wrapper_classes   = apply_filters(
 	'woocommerce_single_product_image_gallery_classes',
@@ -35,11 +54,11 @@ $wrapper_classes   = apply_filters(
 		'images',
 	)
 );
-?>
-<div class="<?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+*/ ?><!--
+<div class="<?php /*echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); */ ?>" data-columns="<?php /*echo esc_attr( $columns ); */ ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 	<div class="woocommerce-product-gallery__wrapper">
 		<?php
-		if ( $post_thumbnail_id ) {
+/*		if ( $post_thumbnail_id ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		} else {
 			$wrapper_classname = $product->is_type( 'variable' ) && ! empty( $product->get_available_variations( 'image' ) ) ?
@@ -53,6 +72,6 @@ $wrapper_classes   = apply_filters(
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id ); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 
 		do_action( 'woocommerce_product_thumbnails' );
-		?>
+		*/ ?>
 	</div>
-</div>
+</div>-->
