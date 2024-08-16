@@ -28,7 +28,7 @@ echo apply_filters(
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( $product->get_id() ),
 		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
-		esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
+		esc_attr( isset( $args['class'] ) ? $args['class'] : 'btn btn-sm btn-pill btn-outline' ),
 		isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
 		esc_html( $product->add_to_cart_text() )
 	),
