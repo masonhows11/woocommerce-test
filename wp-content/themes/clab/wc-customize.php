@@ -26,3 +26,7 @@ add_action('woocommerce_after_shop_loop_item_title',function (){
            <a href="#" class="btn btn-sm btn-pill btn-outline">افزودن به سبد خرید</a>
            </div>';
 },10);
+
+remove_action('woocommerce_shop_loop_header','woocommerce_product_taxonomy_archive_header',10);
+remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
+remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
