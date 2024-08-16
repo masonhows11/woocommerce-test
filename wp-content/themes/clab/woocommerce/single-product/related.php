@@ -15,40 +15,48 @@
  * @version     3.9.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
+if (!defined('ABSPATH')) {
+    exit;
 }
 
-if ( $related_products ) : ?>
+if ($related_products) : ?>
 
-	<section class="related products">
+<div class="section-gap">
+    <div class="container">
+        <div class="row justify-content-center">
 
-		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
 
-		if ( $heading ) :
-			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
-		<?php endif; ?>
-		
-		<?php woocommerce_product_loop_start(); ?>
+            <div class="col-md-12">
+                <?php
+                $heading = apply_filters('woocommerce_product_related_products_heading', __('Related products', 'woocommerce'));
 
-			<?php foreach ( $related_products as $related_product ) : ?>
+                if ($heading): ?>
+                    <h4 class="mb-lg-5 mb-4"><?php echo esc_html($heading); ?></h4>
+                <?php endif; ?>
+            </div>
 
-					<?php
-					$post_object = get_post( $related_product->get_id() );
 
-					setup_postdata( $GLOBALS['post'] =& $post_object ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-					wc_get_template_part( 'content', 'product' );
-					?>
+            <?php foreach ($related_products as $related_product) : ?>
 
-			<?php endforeach; ?>
+                <?php
+                $post_object = get_post($related_product->get_id());
 
-		<?php woocommerce_product_loop_end(); ?>
+                setup_postdata($GLOBALS['post'] =& $post_object); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited, Squiz.PHP.DisallowMultipleAssignments.Found
 
-	</section>
-	<?php
-endif;
+                wc_get_template_part('content', 'product-related');
+                ?>
 
-wp_reset_postdata();
+            <?php endforeach; ?>
+
+           
+
+
+            <?php
+            endif;
+
+            wp_reset_postdata();
+            ?>
+        </div>
+    </div>
+</div>

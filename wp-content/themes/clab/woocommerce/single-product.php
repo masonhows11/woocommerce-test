@@ -45,6 +45,8 @@ get_header( 'shop' ); ?>
 		 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
 		 */
 		do_action( 'woocommerce_after_main_content' );
+		// run custom action for show related product
+		do_action('show_related_products');
 	?>
 
 	<?php
