@@ -28,8 +28,12 @@ $template = wc_get_theme_slug_for_templates();
  * @hooked woocommerce_get_sidebar - 10
  */
 do_action( 'woocommerce_sidebar');
-echo '</div></div></section>';
-
+?>
+    </div>
+    </div>
+    </section>
+<?php
+//echo '</div></div></section>';
 //echo '</main></div>';
 //switch ( $template ) {
 //	case 'twentyten':

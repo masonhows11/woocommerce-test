@@ -56,3 +56,13 @@ add_action('woocommerce_after_shop_loop_item',function (){
     wc_get_template('loop/add-to-cart.php');
     echo '</div>';
 });
+
+add_action('woocommerce_before_main_content',function (){
+    if(!is_product()){
+        echo '<div class="row justify-content-center">';
+    }
+},10);
+
+add_action('woocommerce_after_main_content',function (){
+    
+},10);
