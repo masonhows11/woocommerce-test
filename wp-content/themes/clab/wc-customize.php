@@ -64,5 +64,5 @@ add_action('woocommerce_before_main_content',function (){
 },10);
 
 add_action('woocommerce_after_main_content',function (){
-    
+      echo '</div>';
 },10);

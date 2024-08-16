@@ -27,7 +27,10 @@ $template = wc_get_theme_slug_for_templates();
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action( 'woocommerce_sidebar');
+if(!is_product()){
+    do_action( 'woocommerce_sidebar');
+}
+
 ?>
     </div>
     </div>
