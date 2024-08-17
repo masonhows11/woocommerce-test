@@ -43,7 +43,7 @@
     </script>
 </head>
 
-<body <?php body_class('bg-gray'); ?> >
+<body <?php body_class(); ?> >
 <section class="py-2 bg-gray">
     <div class="container">
         <div class="row">
