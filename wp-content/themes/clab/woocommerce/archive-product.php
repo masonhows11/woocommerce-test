@@ -18,6 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
+get_template_part('shop-title');
 
 /**
  * Hook: woocommerce_before_main_content.
