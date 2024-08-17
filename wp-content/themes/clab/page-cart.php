@@ -8,7 +8,7 @@
             <div class="col-md-6">
                 <!-- heading -->
                 <h3 class="">
-                    سبد خرید
+                    سبد خرید ویرآمد
                 </h3>
             </div>
             <div class="col-md-6">
@@ -31,8 +31,14 @@
 
         <div class="section-gap">
             <div class="container">
-                <!--  To display cart items use the_content() method  -->
-                <?php the_content(); ?>
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!--  To display cart items use the_content() method  -->
+                        <?php the_content(); ?>
+
+                    </div>
+                </div>
             </div>
         </div>
       
