@@ -80,3 +80,4 @@ add_filter('woocommerce_output_related_products_args',function ($args){
 remove_action('woocommerce_after_single_product_summary','woocommerce_output_related_products',20);
 // created custom action for show related product
 add_action('show_related_products','woocommerce_output_related_products');
+
