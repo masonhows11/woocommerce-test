@@ -42,10 +42,10 @@
     text-align: center;
 }
 
-.woocommerce-cart-form__cart-item img{
-    width: 100px;
-    margin: 20px;
-}
+/*.woocommerce-cart-form__cart-item img{*/
+/*    width: 100px;*/
+/*    margin: 20px;*/
+/*}*/
 
 .product-name a{
     text-decoration: none;
