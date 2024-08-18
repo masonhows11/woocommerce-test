@@ -172,7 +172,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 				</td>
 			</tr>
-
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 		</tbody>
 	</table>
