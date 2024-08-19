@@ -18,11 +18,11 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
+<div class="<?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h4 class="mb-3"><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h4>
+	<h5 class="mb-3"><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h5>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
