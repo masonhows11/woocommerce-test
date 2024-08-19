@@ -34,9 +34,10 @@
                 <div class="row">
                     <div class="col-md-12">
 
-                        <!--  To display cart items use the_content() method  -->
-                        <?php the_content(); ?>
-                       
+                        <!--  To display checkout items use the_content() method  -->
+                        <?php  the_content(); ?>
+                       <!-- --><?php /*get_template_part('woocommerce/checkout/payment') */?>
+
 
                     </div>
                 </div>
