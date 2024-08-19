@@ -28,6 +28,7 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 }
 
 ?>
+<h1>fuck you</h1>
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
 
@@ -50,7 +51,8 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 	<?php endif; ?>
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
-	
+
+
 	<h5 class="mb-3" id="order_review_heading"><?php esc_html_e( 'Your order', 'woocommerce' ); ?></h5>
 	
 	<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>

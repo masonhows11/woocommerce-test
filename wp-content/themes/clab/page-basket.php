@@ -31,8 +31,8 @@
                 <div class="row">
                     <div class="col-md-12">
                         <!--  To display cart items use the_content() method  -->
-                        <?php //the_content(); ?>
-                        <?php get_template_part('woocommerce/cart/cart') ?>
+                        <?php the_content(); ?>
+                        <?php //get_template_part('woocommerce/cart/cart') ?>
                     </div>
                 </div>
             </div>
