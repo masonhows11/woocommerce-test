@@ -22,7 +22,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
+	<h4 class="mb-3"><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h4>
 
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
