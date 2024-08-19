@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<div class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
 	<div class="row">
 		<div class="col-md-12">
@@ -185,7 +185,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<div class="col-md-7">
 			<h6>کد تخفیف</h6>
 			<p class="text-muted">لطفا کد کوپن خود را در صورت لزوم وارد کنید</p>
-			<form class="d-md-flex mt-lg-4 mt-3 mb-4">
+			<div class="d-md-flex mt-lg-4 mt-3 mb-4">
 				<?php if ( wc_coupons_enabled() ) { ?>
 					<label for="coupon_code" class="screen-reader-text"><?php esc_html_e( 'Coupon:', 'woocommerce' ); ?></label>
 					<input type="text" name="coupon_code" class="form-control mr-2 mb-2" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
@@ -195,7 +195,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				<button type="submit" class="btn btn-pill btn-outline  mb-2" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
 				<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
-			</form>
+			</div>
 		</div>
 		
 		<div class="col-md-5">
