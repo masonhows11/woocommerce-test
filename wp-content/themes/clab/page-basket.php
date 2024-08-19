@@ -1,5 +1,4 @@
 <?php get_header('shop'); ?>
-
 <!--page title start-->
 <section class="component-section section-top bg-gray">
     <!--<div class="hero-img bg-overlay" data-overlay="1" style="background-image: url(assets/img/price-banner.jpg);"></div>-->
@@ -25,28 +24,21 @@
     </div>
 </section>
 <!--page title end-->
-
 <?php if (have_posts()): ?>
     <?php while (have_posts()): the_post(); ?>
-
         <div class="section-gap">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
                         <!--  To display cart items use the_content() method  -->
                         <?php //the_content(); ?>
                         <?php get_template_part('woocommerce/cart/cart') ?>
-
                     </div>
                 </div>
             </div>
         </div>
-      
-
     <?php endwhile; ?>
 <?php endif; ?>
-
 <?php get_footer(); ?>
 
 
