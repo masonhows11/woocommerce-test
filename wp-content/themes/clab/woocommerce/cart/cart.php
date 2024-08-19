@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<div class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 
 	<div class="row">
 		<div class="col-md-12">
@@ -212,6 +212,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				?>
 			</div>
 		</div>
+
 	</div>
 
 
