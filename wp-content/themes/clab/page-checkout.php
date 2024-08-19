@@ -8,7 +8,7 @@
             <div class="col-md-6">
                 <!-- heading -->
                 <h3 class="">
-                    تایید پرداخت
+                    صفحه پرداخت فروشگاه
                 </h3>
             </div>
             <div class="col-md-6">
@@ -35,8 +35,8 @@
                     <div class="col-md-12">
 
                         <!--  To display checkout items use the_content() method  -->
-                        <?php  the_content(); ?>
-                       <!-- --><?php /*get_template_part('woocommerce/checkout/payment') */?>
+                        <?php  //the_content(); ?>
+                       <?php get_template_part('woocommerce/checkout/form-checkout')?>
 
 
                     </div>
