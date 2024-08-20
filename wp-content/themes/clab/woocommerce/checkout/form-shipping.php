@@ -88,7 +88,7 @@ defined( 'ABSPATH' ) || exit;
 						<input type="text"
 							   class="form-control"
 							   id="<?php echo $key; ?>"
-							   placeholder="نام کاربری">>
+							   placeholder="نام کاربری">
 						<div class="invalid-feedback" style="width: 100%;">
 							نام کاربری شما مورد نیاز است
 						</div>
