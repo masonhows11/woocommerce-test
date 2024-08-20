@@ -46,8 +46,16 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 // to save current data setting in database
                 add_action('woocommerce_update_options_payment_gateways_'.$this->id,[$this,'process_admin_options']);
 
+                // redirect user to bank for pay lv.2
+                add_action('woocommerce_receipt_'.$this->id,[$this,'start_payment']);
+
+                // verify payment
+                add_action('woocommerce_api_'.strtolower(get_class($this),[$this,'verify_payment']));
+
+
             }
 
+            // display form for custom gateway
             public function init_form_fields()
             {
                $this->form_fields = [
@@ -66,9 +74,64 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                     'description' => 'برای استفاده از این درگاه باید API کنید',
                     'default' => '',
 
-            ]
-
+                     ]
                ];
+            }
+
+            // redirect user to bank for pay lv.1
+            public function process_payment($order_id)
+            {
+                $order = new WC_Order($order_id);
+                return  [
+                    'result' => 'success',
+                    'redirect' => $order->get_checkout_order_received_url(true),
+
+                ];
+
+
+            }
+
+            // redirect user to bank for pay lv.3
+            public function start_payment($order_id)
+            {
+
+                global $woocommerce;
+                // save order_id to wc session
+                $woocommerce->session->order_id = $order_id;
+                // get order with order_id
+                $order = new WC_Order($order_id);
+                $total = $order->order_total;
+
+                // make callback url
+                $callback = get_home_url('/');
+                $callback = add_query_arg('wc-api',get_class($this),$callback);
+
+                // redirect user to bank
+                // wp_redirect('')
+            }
+
+            // verify payment
+            public function verify_payment()
+            {
+                global $woocommerce;
+                // get order_id from session
+                $order_id = $woocommerce->session->order_id;
+                // find current order_id
+                $order = new WC_Order($order_id);
+
+                // set msg  for order status
+                $order->add_order_note('سفارش با موفقیت ثبت شد');
+                $order->add_order_note('مشکلی در ثبت سفارش پیش امده');
+
+                // complete payment
+                $order->payment_complete();
+
+                // clear cart
+                $woocommerce->cart->empty_cart();
+
+
+
+
             }
 
         }
