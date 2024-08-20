@@ -37,6 +37,14 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 $this->method_description = "توضیحات درگاه فلان برای ووکامرس";
 
                 $this->init_form_fields();
+                // access to setting section data
+                $this->init_settings();
+                //// sample access to settings data
+                //// $this->merchant = $this->settings['merchant'];
+                //// die($this->merchant);
+
+                // to save current data setting in database
+                add_action('woocommerce_update_options_payment_gateways_'.$this->id,[$this,'process_admin_options']);
 
             }
 
