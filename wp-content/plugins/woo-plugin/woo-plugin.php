@@ -28,6 +28,41 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         {
             // add required gateway features
 
+            public function __construct()
+            {
+                $this->id = 'woo_gateway';
+                $this->method_title = 'درگاه بانک فلان برای ووکامرس';
+                $this->icon = null;
+                $this->has_fields = false;
+                $this->method_description = "توضیحات درگاه فلان برای ووکامرس";
+
+                $this->init_form_fields();
+
+            }
+
+            public function init_form_fields()
+            {
+               $this->form_fields = [
+                    'enabled' => [
+                        'title' => 'فعال / غیر فعال',
+                        'type' => 'checkbox',
+                        'label' => 'فغال سازی درگاه پرداخت',
+                        'description' => 'برای فعال سازی درگاه پرداخت این چک باکس را انتخاب کنید',
+                        'default' => 'yes',
+
+                    ],
+                    'merchant' => [
+                    'title' => 'API درگاه',
+                    'type' => 'text',
+                    'label' => 'API درگاه فلان',
+                    'description' => 'برای استفاده از این درگاه باید API کنید',
+                    'default' => '',
+
+            ]
+
+               ];
+            }
+
         }
 
         function add_woo_gateway($methods)
