@@ -36,6 +36,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 $this->has_fields = false;
                 $this->method_description = "توضیحات درگاه فلان برای ووکامرس";
 
+                // display gateway for user
+                $this->title = "درگاه بانک تست برای ووکامرس";
+
                 $this->init_form_fields();
                 // access to setting section data
                 $this->init_settings();
@@ -50,7 +53,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 add_action('woocommerce_receipt_'.$this->id,[$this,'start_payment']);
 
                 // verify payment
-                add_action('woocommerce_api_'.strtolower(get_class($this),[$this,'verify_payment']));
+                add_action('woocommerce_api_'.strtolower(get_class($this)),[$this,'verify_payment']);
 
 
             }
