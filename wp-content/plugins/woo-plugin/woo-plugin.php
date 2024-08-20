@@ -43,11 +43,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 //// sample access to settings data
                 //// $this->merchant = $this->settings['merchant'];
                 //// die($this->merchant);
-
-                // display gateway for user
-                // $this->title = $this->get_option( 'title');
-                // $this->title = "درگاه بانک تست برای ووکامرس";
-                // $this->description = $this->get_option('description');
+                
 
                 // to save current data setting in database
                 add_action('woocommerce_update_options_payment_gateways_'.$this->id,[$this,'process_admin_options']);
