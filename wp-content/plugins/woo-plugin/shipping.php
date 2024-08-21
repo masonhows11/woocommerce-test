@@ -42,8 +42,7 @@ function init_woo_shipping()
                 ]
             ];
         }
-
-
+        
         // To calculate the defined cost such as the weight of the goods
         // $package args include order details
         // like price address qty color user ...
@@ -51,12 +50,10 @@ function init_woo_shipping()
         {
             $cost = 0;
             $weight = 0;
-
             foreach ($package['content'] as $item => $value) {
                 $product = $value['data'];
                 $weight = $product->get_weight() * $value['quantity'];
             }
-
             // convert to kg unit
             $weight = wc_get_weight($weight, 'kg');
             if ($weight <= $this->weight) {
@@ -64,16 +61,12 @@ function init_woo_shipping()
             } else {
                 $cost = $weight * 20000;
             }
-
             $this->add_rate([
                 'id' => $this->id,
                 'label' => $this->title,
                 'cost' => $cost,
             ]);
-
         }
-
-
         // end class
     }
 
