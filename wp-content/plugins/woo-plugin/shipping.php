@@ -6,6 +6,7 @@ function init_woo_shipping()
 {
     class Woo_shipping extends WC_Shipping_Method
     {
+        // start class
 
 
         public function __construct()
@@ -18,9 +19,10 @@ function init_woo_shipping()
             $this->init_form_fields();
             // access to setting section data
             $this->init_settings();
+            $this->weight = $this->settings['weight'];
 
             // to save current data setting in database
-            add_action('woocommerce_update_options_shipping_'.$this->id,[$this,'process_admin_options']);
+            add_action('woocommerce_update_options_shipping_' . $this->id, [$this, 'process_admin_options']);
 
         }
 
@@ -33,7 +35,7 @@ function init_woo_shipping()
                     'label' => 'فعال / غیر فعال',
                     'type' => 'checkbox',
                 ],
-                'amount' => [
+                'weight' => [
                     'title' => 'حداکثر وزن سفارش',
                     'label' => 'حداکثر وزن سفارش',
                     'type' => 'number',
@@ -41,15 +43,48 @@ function init_woo_shipping()
             ];
         }
 
+
+        // To calculate the defined cost such as the weight of the goods
+        // $package args include order details
+        // like price address qty color user ...
+        public function calculate_shipping($package = array())
+        {
+            $cost = 0;
+            $weight = 0;
+
+            foreach ($package['content'] as $item => $value) {
+                $product = $value['data'];
+                $weight = $product->get_weight() * $value['quantity'];
+            }
+
+            // convert to kg unit
+            $weight = wc_get_weight($weight, 'kg');
+            if ($weight <= $this->weight) {
+                $cost = 0;
+            } else {
+                $cost = $weight * 20000;
+            }
+
+            $this->add_rate([
+                'id' => $this->id,
+                'label' => $this->title,
+                'cost' => $cost,
+            ]);
+
+        }
+
+
+        // end class
     }
 
     // add our gateway to gateway list / wc class list
     // or activate this feature
-    function load_woo_shipping_method($methods){
+    function load_woo_shipping_method($methods)
+    {
         $methods['woo_shipping'] = 'Woo_shipping';
         return $methods;
     }
 
     // To activate this feature
-    add_filter('woocommerce_shipping_methods','load_woo_shipping_method');
+    add_filter('woocommerce_shipping_methods', 'load_woo_shipping_method');
 }
