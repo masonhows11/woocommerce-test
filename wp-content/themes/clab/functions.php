@@ -102,6 +102,7 @@ function woocommerce_ir_force_enable_reviews( $enable, $post_id ) {
 
 if(is_admin()){
     include CLAB_APP . 'admin/admin.php';
+    include CLAB_PATH . 'options-panel/index.php';
 }
 include CLAB_APP .'user/user.php';
 include CLAB_PATH .'wc-customize.php';
