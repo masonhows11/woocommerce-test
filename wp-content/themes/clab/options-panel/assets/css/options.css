@@ -1,0 +1,34 @@
+.container {
+    background: white;
+    margin: 50px;
+    min-height: 2000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.options-menu {
+    background: #00A8EF;
+    width: 20%;
+    height: 100%;
+}
+.options-menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+.options-menu li {
+    text-align: center;
+}
+
+.options-menu li a {
+    color: white;
+    padding: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.options-content {
+    width: 80%;
+}
