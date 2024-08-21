@@ -1,9 +1,8 @@
 .container {
     background: white;
     margin: 50px;
-    min-height: 2000px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .options-menu {
@@ -27,8 +26,20 @@
     text-decoration: none;
     font-size: 1.1rem;
     width: 100%;
+    transition: all .3s;
+}
+.options-menu li a:hover{
+    background: white;
+    color: black;
+}
+
+a.active{
+    background:white;
+    color: black !important;
 }
 
 .options-content {
-    width: 80%;
+    max-width: 80%;
+    flex: 1;
+    padding: 50px;
 }

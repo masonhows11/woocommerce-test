@@ -5,23 +5,27 @@
         <div class="options-menu">
             <ul>
                 <li>
-                    <a href="">عمومی</a>
+                    <a class="<?php echo  $current_tab === 'general' ? 'active' : '' ?>"
+                       href="<?php echo add_query_arg(['tab' => 'general']) ?>">عمومی</a>
                 </li>
                 <li>
-                    <a href="">مطالب</a>
+                    <a class="<?php echo  $current_tab === 'posts' ? 'active' : '' ?>"
+                       href="<?php echo add_query_arg(['tab' => 'posts']) ?>">مطالب</a>
                 </li>
                 <li>
-                    <a href="">تصاویر</a>
+                    <a class="<?php echo  $current_tab === 'images' ? 'active' : '' ?>"
+                       href="<?php echo add_query_arg(['tab' => 'images']) ?>">تصاویر</a>
                 </li>
                 <li>
-                    <a href="">اطلاع رسانی</a>
+                    <a class="<?php echo  $current_tab === 'notification' ? 'active' : '' ?>"
+                       href="<?php echo add_query_arg(['tab' => 'notification']) ?>">اطلاع رسانی</a>
                 </li>
 
             </ul>
         </div>
 
         <div class="options-content">
-
+            <?php include "$current_tab.php" ?>
         </div>
 
 
