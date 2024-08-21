@@ -130,6 +130,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
             return $methods;
         }
         // add our gateway to gateway list / wc class list
+        // or activate this feature
         add_filter('woocommerce_payment_gateways','add_woo_gateway');
     }
 

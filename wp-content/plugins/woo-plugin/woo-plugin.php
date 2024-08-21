@@ -23,5 +23,6 @@ define('WOO_PLUGIN_DIR',plugin_dir_path(__FILE__));
 if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
 
     include WOO_PLUGIN_DIR .'gateway.php';
+    include WOO_PLUGIN_DIR . 'shipping.php';
 
 };
