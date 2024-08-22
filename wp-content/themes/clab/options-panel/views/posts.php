@@ -11,6 +11,13 @@
             <input type="checkbox" name="show_excerpt" id="show_excerpt" <?php checked($options['show_excerpt'] > 0 ) ?> >
         </div>
 
+        <div class="form-row">
+            <label for="select_font">فونت مطلب :</label>
+            <section  name="select_font" id="select_font">
+                
+            </section>
+        </div>
+
 
     </fieldset>
 
