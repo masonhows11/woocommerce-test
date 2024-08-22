@@ -50,6 +50,9 @@ a.active{
     display: inline-block;
     width: 200px;
 }
-.form-row input{
+.form-row input[type="text"],
+.form-row input[type="text"],
+.form-row textarea
+{
     width: 300px;
 }

@@ -36,7 +36,7 @@ function clab_show_options_panel()
     $clab_options = get_option('clab_options', []);
     // can access to $options variable in general view/page/file
     // to display saved information
-    $options = $clab_options[$current_tab];
+    $options = isset($clab_options[$current_tab]) ? $clab_options[$current_tab] : [];
     include 'views/index.php';
 }
 
@@ -45,11 +45,28 @@ add_action('clab_save_options', 'clab_store_options');
 function clab_store_options($current_tab)
 {
     $clab_options = get_option('clab_options', []);
-    $clab_options[$current_tab] = [
-      'site_title' => sanitize_text_field($_POST['site_title']),
-      'home_posts_count' => intval($_POST['home_posts_count']) > 0 ? intval($_POST['home_posts_count']) : 1,
-    ];
-    update_option('clab_options',$clab_options);
+    switch ($current_tab){
+        case 'general':
+            $clab_options['general'] = [
+                'site_title' => sanitize_text_field($_POST['site_title']),
+                'home_posts_count' => intval($_POST['home_posts_count']) > 0 ? intval($_POST['home_posts_count']) : 1,
+            ];
+            break;
+        case 'posts':
+            $clab_options['posts'] = [
+                'show_category' => isset($_POST['show_category']) ? 1 : 0,
+                'show_excerpt' => isset($_POST['show_excerpt']) ? 1 : 0,
+            ];
+            break;
+        case 'images':
+
+            break;
+        case 'notification':
+
+            break;
+    }
+
+    update_option('clab_options', $clab_options);
 
     //    $clab_options['general'] = [];
     //    $clab_options['posts'] = [];

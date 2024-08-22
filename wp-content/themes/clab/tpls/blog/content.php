@@ -1,4 +1,11 @@
 <div class="col-lg-8">
+    <?php
+
+    $home_posts_count = clab_get_general_option('home_posts_count');
+    if(intval($home_posts_count) > 0) {
+        query_posts(['posts_per_page' => intval($home_posts_count)]);
+    }
+    ?>
 
     <?php if (have_posts()): ?>
         <?php while (have_posts()): the_post(); ?>
