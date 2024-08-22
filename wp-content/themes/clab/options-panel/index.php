@@ -56,6 +56,7 @@ function clab_store_options($current_tab)
             $clab_options['posts'] = [
                 'show_category' => isset($_POST['show_category']) ? 1 : 0,
                 'show_excerpt' => isset($_POST['show_excerpt']) ? 1 : 0,
+                'show_comments' => isset($_POST['show_comments']) ? 1 : 0,
             ];
             break;
         case 'images':

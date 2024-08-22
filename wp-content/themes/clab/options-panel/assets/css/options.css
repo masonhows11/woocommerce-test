@@ -56,3 +56,10 @@ a.active{
 {
     width: 300px;
 }
+.posts-option-fieldset{
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.posts-option-fieldset legend{
+    padding: 10px;
+}
