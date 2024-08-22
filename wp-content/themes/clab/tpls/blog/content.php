@@ -19,11 +19,16 @@
                                  alt="card image"/></a>
                 <h3 class=""><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="meta font-lora my-4">
+                    <?php if($show_category): ?>
                     <a href="#">سفر کردن</a>
+                    <?php endif; ?>
                     <span class="meta-separator"></span>
                     <a href="#">1398 فروردین</a>
                 </div>
-                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                <?php if($show_excerpt): ?>
+                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.</p>
+                <?php endif; ?>
+
             </div>
 
         <?php endwhile; ?>
