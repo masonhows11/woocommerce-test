@@ -43,3 +43,13 @@ a.active{
     flex: 1;
     padding: 50px;
 }
+.form-row{
+    margin: 20px 0;
+}
+.form-row label{
+    display: inline-block;
+    width: 200px;
+}
+.form-row input{
+    width: 300px;
+}
