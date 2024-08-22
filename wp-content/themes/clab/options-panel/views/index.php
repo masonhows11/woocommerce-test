@@ -25,7 +25,10 @@
         </div>
 
         <div class="options-content">
-            <?php include "$current_tab.php" ?>
+            <form action="" method="post">
+                <?php include "$current_tab.php" ?>
+            </form>
+
         </div>
 
 
