@@ -1,10 +1,14 @@
 <div class="col-lg-8">
     <?php
 
+    // use options-panel feature
     $home_posts_count = clab_get_general_option('home_posts_count');
-    if(intval($home_posts_count) > 0) {
+    if (intval($home_posts_count) > 0) {
         query_posts(['posts_per_page' => intval($home_posts_count)]);
     }
+    //
+    $show_category = clab_get_posts_option('show_category');
+    $show_excerpt = clab_get_posts_option('show_excerpt');
     ?>
 
     <?php if (have_posts()): ?>
