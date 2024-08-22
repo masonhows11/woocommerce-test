@@ -38,6 +38,8 @@ function clab_show_options_panel()
         'صمیم' => 'samim',
         'تنها' => 'tanha',
     ];
+    // image size option
+    $images_sizes = get_intermediate_image_sizes();
 
     // to display saved options in form
     $clab_options = get_option('clab_options', []);
@@ -68,7 +70,9 @@ function clab_store_options($current_tab)
             ];
             break;
         case 'images':
-
+            $clab_options['images'] = [
+                'default_image_size' => isset($_POST['default_image_size']),
+            ];
             break;
         case 'notification':
 
