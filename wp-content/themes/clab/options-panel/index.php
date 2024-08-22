@@ -64,6 +64,7 @@ function clab_store_options($current_tab)
                 'show_category' => isset($_POST['show_category']) ? 1 : 0,
                 'show_excerpt' => isset($_POST['show_excerpt']) ? 1 : 0,
                 'show_comments' => isset($_POST['show_comments']) ? 1 : 0,
+                'select_font' => sanitize_text_field($_POST['select_font']),
             ];
             break;
         case 'images':

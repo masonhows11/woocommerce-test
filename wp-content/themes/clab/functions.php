@@ -107,3 +107,4 @@ if(is_admin()){
 include CLAB_APP .'user/user.php';
 include CLAB_PATH .'wc-customize.php';
 include CLAB_PATH . 'options-panel/functions.php';
+include CLAB_PATH . 'options-panel/frontend.php';

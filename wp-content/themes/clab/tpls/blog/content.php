@@ -15,8 +15,7 @@
         <?php while (have_posts()): the_post(); ?>
 
             <div class="blog-post">
-                <a href="#"><img class="rounded mb-lg-5 mb-4" src="<?php echo CLAB_URL; ?>assets/img/blog/b1.jpg"
-                                 alt="card image"/></a>
+                <a href="#"><img class="rounded mb-lg-5 mb-4" src="<?php echo CLAB_URL; ?>assets/img/blog/b1.jpg" alt="card image"/></a>
                 <h3 class=""><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="meta font-lora my-4">
                     <?php if($show_category): ?>

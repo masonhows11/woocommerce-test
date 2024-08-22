@@ -15,7 +15,7 @@
             <label for="select_font">فونت مطلب :</label>
             <select  name="select_font" id="select_font">
                 <?php foreach ($font_list as $title => $name): ?>
-                <option value="<?php echo $name ?>" >  <?php echo $title ?> </option>
+                <option <?php selected($options['select_font'] === $name) ?> value="<?php echo $name ?>" >  <?php echo $title ?> </option>
                 <?php endforeach; ?>
             </select>
         </div>
