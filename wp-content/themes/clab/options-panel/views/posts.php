@@ -13,9 +13,11 @@
 
         <div class="form-row">
             <label for="select_font">فونت مطلب :</label>
-            <section  name="select_font" id="select_font">
-                
-            </section>
+            <select  name="select_font" id="select_font">
+                <?php foreach ($font_list as $title => $name): ?>
+                <option value="<?php echo $name ?>" >  <?php echo $title ?> </option>
+                <?php endforeach; ?>
+            </select>
         </div>
 
 

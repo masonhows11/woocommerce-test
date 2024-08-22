@@ -32,6 +32,13 @@ function clab_show_options_panel()
     if (isset($_POST['save_options'])) {
         do_action('clab_save_options', $current_tab);
     }
+    // font list to select font
+    $font_list = [
+        'وزیر' => 'vazir',
+        'صمیم' => 'samim',
+        'تنها' => 'tanha',
+    ];
+
     // to display saved options in form
     $clab_options = get_option('clab_options', []);
     // can access to $options variable in general view/page/file
