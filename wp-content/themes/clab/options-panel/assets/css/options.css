@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: row;
 }
-
 .options-menu {
     background: #00A8EF;
     width: 20%;
@@ -14,11 +13,9 @@
     margin: 0;
     padding: 0;
 }
-
 .options-menu li {
     text-align: center;
 }
-
 .options-menu li a {
     color: white;
     padding: 20px 0;
@@ -32,12 +29,10 @@
     background: white;
     color: black;
 }
-
 a.active{
     background:white;
     color: black !important;
 }
-
 .options-content {
     max-width: 80%;
     flex: 1;

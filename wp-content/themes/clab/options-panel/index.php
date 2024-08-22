@@ -71,7 +71,7 @@ function clab_store_options($current_tab)
             break;
         case 'images':
             $clab_options['images'] = [
-                'default_image_size' => isset($_POST['default_image_size']),
+                'default_image_size' => sanitize_text_field($_POST['default_image_size']),
             ];
             break;
         case 'notification':
