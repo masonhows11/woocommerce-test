@@ -7,7 +7,7 @@
 .options-menu {
     background: #00A8EF;
     width: 20%;
-    height: 100%;
+    height: auto;
 }
 .options-menu ul{
     margin: 0;
