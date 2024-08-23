@@ -11,7 +11,7 @@ class DashboardHandler extends Handler {
 
     public function index()
     {
-        view::load('panel/dashboard/index.php');
+        view::load('panel.dashboard.index');
         // the second parameter is variable pass to view file
         // view::load('panel/dashboard/index.php' , ['name' => 'mason' , 'age' => 32]);
         //var_dump('this is index fun in dashboard');

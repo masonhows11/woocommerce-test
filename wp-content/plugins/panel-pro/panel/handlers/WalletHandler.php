@@ -11,6 +11,6 @@ class WalletHandler extends Handler{
 
     public function index()
     {
-        view::load('panel/wallet/index.php');
+        view::load('panel.wallet.index');
     }
 }

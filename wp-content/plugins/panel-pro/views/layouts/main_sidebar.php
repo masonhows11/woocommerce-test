@@ -33,11 +33,11 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> داشبرد اول</a></li>
-                    <li><a href="index2.html"><i class="fa fa-circle-o"></i> داشبرد دوم</a></li>
+                    <li class="active"><a href="/dashboard"><i class="fa fa-circle-o"></i> داشبرد اول</a></li>
+
                 </ul>
             </li>
-            <li class="treeview">
+           <!-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-files-o"></i>
                     <span>لایه های صفحه</span>
@@ -91,21 +91,34 @@
                     <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> تایم لاین</a></li>
                     <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> مدال</a></li>
                 </ul>
-            </li>
+            </li>-->
+
             <li class="treeview">
                 <a href="#">
-                    <i class="fa fa-edit"></i> <span>فرم ها</span>
+                    <i class="fa fa-edit"></i> <span>پروفایل</span>
                     <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> اجزای عمومی</a></li>
-                    <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> پیشرفته</a></li>
-                    <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> ویرایشگر</a></li>
+                    <li><a href="/dashboard/profile"><i class="fa fa-circle-o"></i>بروز رسانی</a></li>
                 </ul>
             </li>
+
             <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-edit"></i> <span>کیف پول</span>
+                    <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/dashboard/wallet"><i class="fa fa-circle-o"></i>کیف پول</a></li>
+                    <li><a href="/dashboard/wallet?action=transactions"><i class="fa fa-circle-o"></i>تراکنش ها</a></li>
+                </ul>
+            </li>
+
+           <!-- <li class="treeview">
                 <a href="#">
                     <i class="fa fa-table"></i> <span>جداول</span>
                     <span class="pull-left-container">
@@ -189,10 +202,10 @@
                 </ul>
             </li>
             <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>مستندات</span></a></li>
-            <li class="header">برچسب ها</li>
-            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>مهم</span></a></li>
+            <li class="header">برچسب ها</li>-->
+            <!--<li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>مهم</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>هشدار</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>اطلاعات</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>اطلاعات</span></a></li>-->
         </ul>
     </section>
     <!-- /.sidebar -->

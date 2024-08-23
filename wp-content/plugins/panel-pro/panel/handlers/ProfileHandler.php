@@ -10,6 +10,6 @@ class ProfileHandler extends Handler{
 
     public function index()
     {
-        view::load('panel/profile/index.php');
+        view::load('panel.profile.index');
     }
 }
