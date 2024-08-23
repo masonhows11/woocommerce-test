@@ -10,6 +10,6 @@ class WalletHandler extends Handler{
 
     public function index()
     {
-        // TODO: Implement index() method.
+        var_dump('this is index fun in wallet');
     }
 }

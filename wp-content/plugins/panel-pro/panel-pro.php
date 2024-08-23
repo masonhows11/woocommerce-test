@@ -27,7 +27,11 @@ class  PanelPro{
         // get dir path
         define('UPP_DIR',plugin_dir_path(__FILE__));
         // get url path
-        define('UUP_URL',plugin_dir_url(__FILE__));
+        define('UPP_URL',plugin_dir_url(__FILE__));
+        // define view path
+        define('UPP_DIR_VIEW', UPP_DIR.DIRECTORY_SEPARATOR.'views/');
+        // define assets url
+        define('UPP_ASSETS_URL',UPP_URL.'/assets/');
     }
 
     public function init()
