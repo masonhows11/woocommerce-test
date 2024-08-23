@@ -35,14 +35,14 @@ class Router
 
         $handler_name = $this->format_handler_name($handler);
 
-        if ($this->is_handler_valid($handler_name)) {
-            throw new Exception('request handler is not valid');
+        if (!$this->is_handler_valid($handler_name)) {
+            throw new Exception('request handler is not valid !');
         }
         // include & make new obj from requested handler class
         $handler_class_path = $this->get_handler_file($handler_name);
         include_once $handler_class_path;
-        new $handler_class_path;
-        exit();
+        new $handler_name;
+
     }
 
     private function parse_uri($uri)
@@ -55,6 +55,7 @@ class Router
     {
         $handler_file_path = $this->get_handler_file($handler);
         return file_exists($handler_file_path) && is_readable($handler_file_path);
+
     }
 
     private function get_handler_file($handler)
