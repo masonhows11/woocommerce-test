@@ -11,7 +11,7 @@ if(!function_exists('clab_setup')){
     function clab_setup(){
 
         // add theme_textdomain for user translate sys
-        load_theme_textdomain('clab',get_template_directory().'/languages');
+        load_theme_textdomain('clab_text_domain',get_template_directory().'/languages');
 
         // add title
         add_theme_support('title-tag');

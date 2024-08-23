@@ -19,12 +19,8 @@
                         $image_size = clab_get_image_option('default_image_size');
                         the_post_thumbnail(!empty($image_size) ? $image_size : 'post-thumbnail',
                         ['class' => 'rounded img-responsive mb-lg-4 mb-4']);
-
                         ?>
 
-                    <!-- start thumbnail -->
-<!--                    <img class="rounded mb-lg-5 mb-4" src="--><?php //echo CLAB_URL; ?><!--assets/img/blog/b1.jpg" alt="card image"/>-->
-                    <!-- end thumbnail -->
                 </a>
                 <h3 class=""><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 <div class="meta font-lora my-4">
