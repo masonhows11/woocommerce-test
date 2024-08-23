@@ -15,10 +15,6 @@ class Router
     {
 
         $request_uri = $_SERVER['REQUEST_URI'];
-
-        // router started & worked
-        // var_dump($request_uri);
-        // exit();
         $this->dispatch_request($request_uri);
 
 
@@ -30,6 +26,9 @@ class Router
     private function dispatch_request($request_uri)
     {
 
+        if (strpos($request_uri, 'dashboard') === false) {
+            return;
+        }
 
         $handler = $this->parse_uri($request_uri);
 
@@ -41,13 +40,15 @@ class Router
         // include & make new obj from requested handler class
         $handler_class_path = $this->get_handler_file($handler_name);
         include_once $handler_class_path;
-        new $handler_name;
+         $handler_obj =  new $handler_name;
+         $handler_obj->index();
+        exit();
 
     }
 
     private function parse_uri($uri)
     {
-        $uri_part = explode('/', strtok($uri,'?'));
+        $uri_part = explode('/', strtok($uri, '?'));
         return end($uri_part);
     }
 

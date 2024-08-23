@@ -1,7 +1,6 @@
 <?php
-
 include 'Handler.php';
-class DashboardHandler extends Handler {
+class ProfileHandler extends Handler{
 
     public function __construct()
     {
