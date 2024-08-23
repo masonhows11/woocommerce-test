@@ -47,7 +47,7 @@ class Router
 
     private function parse_uri($uri)
     {
-        $uri_part = explode('/', $uri);
+        $uri_part = explode('/', strtok($uri,'?'));
         return end($uri_part);
     }
 
