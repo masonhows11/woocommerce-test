@@ -75,7 +75,10 @@ function clab_store_options($current_tab)
             ];
             break;
         case 'notification':
-
+            $clab_options['notification'] = [
+                'new_user_email_title' => sanitize_text_field($_POST['new_user_email_title']),
+                'new_user_email_body' => sanitize_text_field($_POST['new_user_email_body']),
+            ];
             break;
     }
 

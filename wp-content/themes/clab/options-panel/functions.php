@@ -26,3 +26,12 @@ function clab_get_image_option($name){
     return isset($image_options[$name]) ? $image_options[$name] : null;
 
 }
+
+function clab_get_notification_option($name){
+
+    $options = get_option('clab_options');
+    $notification_options  = $options['notification'];
+
+    return isset($notification_options[$name]) ? $notification_options[$name] : null;
+
+}

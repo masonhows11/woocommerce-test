@@ -20,3 +20,30 @@ function clab_options_panel_css()
 
 }
 
+// send email with new  title & body when new user sign up
+// use notification option
+add_action('user_register','clab_process_notifications');
+function clab_process_notifications($user_id){
+
+    $email_subject = clab_get_notification_option('new_user_email_title');
+    $email_body = clab_get_notification_option('new_user_email_body');
+    if(!empty($email_subject) && !empty($email_body)){
+        $user = get_user_by('id',$user_id);
+        wp_mail($user->user_email,$email_subject,$email_body);
+        // use mailtrap test email for test send email
+    }
+
+}
+
+// set mail config from test email
+// using mailtrap web test
+function mailtrap($phpmailer) {
+    $phpmailer->isSMTP();
+    $phpmailer->Host = 'sandbox.smtp.mailtrap.io';
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->Port = 2525;
+    $phpmailer->Username = '1480411f94b162';
+    $phpmailer->Password = 'ed6618069fb09d';
+}
+
+add_action('phpmailer_init', 'mailtrap');
