@@ -4,7 +4,7 @@
  * Plugin Name: Woo plugin
  * Plugin URI: https://websolo.ir/
  * Description: a woocommerce sample plugin
- * Version: 9.1.4
+ * Version: 1.0.0
  * Author: Naeem soltany
  * Author URI: https://websolo.ir/
  * Text Domain: woo-plugin
