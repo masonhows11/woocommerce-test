@@ -34,19 +34,20 @@ class  PanelPro{
     {
         register_activation_hook(__FILE__,[$this,'activation']);
         register_deactivation_hook(__FILE__, [$this,'deactivation']);
+        // to run router engine
+        $this->start_router();
 
     }
-
     public function activation()
-    {
-        
-    }
-
+    {}
     public function deactivation()
+    {}
+    private function start_router(): void
     {
-
+        // make new from Router class
+        include "router.php";
+        new Router();
     }
-
 }
 
 new PanelPro();
