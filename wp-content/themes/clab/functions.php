@@ -10,6 +10,9 @@ add_action('after_setup_theme','clab_setup');
 if(!function_exists('clab_setup')){
     function clab_setup(){
 
+        // add theme_textdomain for user translate sys
+        load_theme_textdomain('clab',get_template_directory().'/languages');
+
         // add title
         add_theme_support('title-tag');
         // is current  theme support woocommerce plugin
