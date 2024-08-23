@@ -25,9 +25,9 @@ class  PanelPro{
     public function Constants()
     {
         // get dir path
-        define('OOP_DIR',plugin_dir_path(__FILE__));
+        define('UPP_DIR',plugin_dir_path(__FILE__));
         // get url path
-        define('OOP_URL',plugin_dir_url(__FILE__));
+        define('UUP_URL',plugin_dir_url(__FILE__));
     }
 
     public function init()
