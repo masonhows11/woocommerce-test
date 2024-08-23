@@ -11,7 +11,7 @@
     <!-- Bootstrap rtl -->
     <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>css/rtl.css">
     <!-- persian Date Picker -->
-    <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>css/persian-datepicker-0.4.5.min">
+    <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>css/persian-datepicker-0.4.5.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -21,14 +21,15 @@
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
     <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>css/skins/_all-skins.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap wysihtml5 - text editor -->
+    <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
     <!-- Morris chart -->
 <!--    <link rel="stylesheet" href="bower_components/morris.js/morris.css">-->
     <!-- jvectormap -->
 <!--    <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">-->
-    <!-- Daterange picker -->
-<!--    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">-->
-    <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,13 +55,6 @@
                 <span class="sr-only">Toggle navigation</span>
             </a>
 
-
-            <!-- Delete This after download -->
-            <a href="https://github.com/hosseinizadeh/AdminLTE_Persian" class="btn hidden-xs" style="margin:6px 100px;padding:9px 50px;background-color:#d61577;border-color:#ad0b5d;font-weight:bold;color:#FFF">دانلود رایگان قالب</a>
-            <!-- End Delete-->
-
-
-
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <!-- Messages: style can be found in dropdown.less-->
@@ -77,7 +71,7 @@
                                     <li><!-- start message -->
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 علیرضا
@@ -90,7 +84,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 نگین
@@ -102,7 +96,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 نسترن
@@ -114,7 +108,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user3-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 نگین
@@ -126,7 +120,7 @@
                                     <li>
                                         <a href="#">
                                             <div class="pull-right">
-                                                <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user4-128x128.jpg" class="img-circle" alt="User Image">
                                             </div>
                                             <h4>
                                                 نسترن
@@ -262,13 +256,13 @@
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="<?php echo UPP_ASSETS_URL; ?>img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <span class="hidden-xs">علیرضا حسینی زاده</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
                                     علیرضا حسینی زاده
@@ -316,7 +310,7 @@
             <!-- Sidebar user panel -->
             <div class="user-panel">
                 <div class="pull-right image">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="<?php echo UPP_ASSETS_URL; ?>img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-right info">
                     <p>علیرضا حسینی زاده</p>
@@ -657,7 +651,7 @@
                         <div class="box-body chat" id="chat-box">
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user4-128x128.jpg" alt="user image" class="online">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -682,7 +676,7 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user3-128x128.jpg" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
@@ -695,7 +689,7 @@
                             <!-- /.item -->
                             <!-- chat item -->
                             <div class="item">
-                                <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+                                <img src="<?php echo UPP_ASSETS_URL; ?>img/user2-160x160.jpg" alt="user image" class="offline">
 
                                 <p class="message">
                                     <a href="#" class="name">
