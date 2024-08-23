@@ -1,5 +1,6 @@
 <?php
-include 'Handler.php';
+include "Handler.php";
+include  UPP_DIR ."view.class.php";
 class ProfileHandler extends Handler{
 
     public function __construct()
@@ -9,6 +10,6 @@ class ProfileHandler extends Handler{
 
     public function index()
     {
-        // TODO: Implement index() method.
+        view::load('panel/profile/index.php');
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
-include 'Handler.php';
+include "Handler.php";
+include  UPP_DIR ."view.class.php";
 class WalletHandler extends Handler{
 
     public function __construct()
@@ -10,6 +11,6 @@ class WalletHandler extends Handler{
 
     public function index()
     {
-        var_dump('this is index fun in wallet');
+        view::load('panel/wallet/index.php');
     }
 }
