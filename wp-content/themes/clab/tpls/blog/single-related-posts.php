@@ -1,6 +1,6 @@
 <?php
 $cats = get_the_category();
-$related_posts = get_related_posts($cats[0]->term_id, 3);
+$related_posts = get_related_posts(get_the_ID(),$cats[0]->term_id, 3);
 ?>
 
 <section class="section-gap bg-gray">

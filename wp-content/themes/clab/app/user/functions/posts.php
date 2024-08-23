@@ -1,9 +1,10 @@
 <?php
-function get_related_posts($category_id, $count = -1)
+function get_related_posts($post_id,$category_id, $count = -1)
 {
     $related_posts_collection = [];
     $related_posts = new WP_Query([
         'cat' => $category_id,
+        'posts_not_in' => [$post_id],
         'posts_per_page' => $count
     ]);
 
