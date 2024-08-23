@@ -30,7 +30,9 @@ class Router
     private function dispatch_request($request_uri)
     {
 
+
         $handler = $this->parse_uri($request_uri);
+
         $handler_name = $this->format_handler_name($handler);
 
         if ($this->is_handler_valid($handler_name)) {
@@ -46,6 +48,7 @@ class Router
     private function parse_uri($uri)
     {
         $uri_part = explode('/', $uri);
+        return end($uri_part);
     }
 
     private function is_handler_valid($handler)
@@ -56,17 +59,13 @@ class Router
 
     private function get_handler_file($handler)
     {
-
         $handler_file_path = UPP_DIR . DIRECTORY_SEPARATOR . 'panel/handlers/' . $handler . '.php';
         return $handler_file_path;
     }
 
     private function format_handler_name($handler)
     {
-
-        $formatted_handler = ucfirst($handler).'Handler';
-        var_dump($formatted_handler);
-        return $formatted_handler;
+        return ucfirst($handler) . 'Handler';
     }
 
 }
