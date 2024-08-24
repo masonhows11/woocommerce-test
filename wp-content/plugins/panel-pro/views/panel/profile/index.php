@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="col-lg-12">
+    <div class="col-lg-12 panel-form-edit-info">
         <!-- Horizontal Form -->
         <div class="box box-info">
             <div class="box-header with-border">
@@ -21,7 +21,7 @@
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">ایمیل</label>
                         <div class="col-sm-10">
-                            <input type="email" name="email" class="form-control" id="email" placeholder="ایمیل">
+                            <input type="email" name="email" class="form-control" id="email" disabled>
                         </div>
                     </div>
 
@@ -36,7 +36,7 @@
                 <!-- /.box-body -->
                 <div class="box-footer">
                     <button type="submit" class="btn btn-default">انصراف</button>
-                    <button type="submit" class="btn btn-info pull-right">ورود</button>
+                    <button type="submit" class="btn btn-success pull-right">ذخیره</button>
                 </div>
                 <!-- /.box-footer -->
             </form>
