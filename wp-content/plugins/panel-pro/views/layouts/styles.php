@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>bootstrap-daterangepicker/daterangepicker.css">
 <!-- bootstrap wysihtml5 - text editor -->
 <link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+<!-- custom -->
+<link rel="stylesheet" href="<?php echo UPP_ASSETS_URL; ?>css/style.css">
+
 
 <!-- Morris chart -->
 <!--    <link rel="stylesheet" href="bower_components/morris.js/morris.css">-->
