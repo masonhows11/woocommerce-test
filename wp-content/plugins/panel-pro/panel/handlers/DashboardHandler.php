@@ -6,16 +6,16 @@ class DashboardHandler extends Handler {
 
     public function __construct()
     {
-
+        parent::__construct();
     }
 
     public function index()
     {
-        $current_user = wp_get_current_user();
+
         $params = [
-          'current_user' => $current_user,
-          'user_posts_count' => count_user_posts($current_user->ID),
-          'user_comments_count' => $this->get_user_comments_count($current_user->ID) ,
+          'current_user' => $this->current_user,
+          'user_posts_count' => count_user_posts($this->current_user->ID),
+          'user_comments_count' => $this->get_user_comments_count($this->current_user->ID) ,
         ];
         view::load('panel.dashboard.index',$params);
         // the second parameter is variable pass to view file
