@@ -1,3 +1,18 @@
 <div class="row">
-    <p>کیف پول</p>
+
+    <div class="col-lg-12 panel-form-edit-info">
+        <!-- Horizontal Form -->
+        <div class="box box-info">
+            <div class="box-header with-border">
+                <h3 class="box-title">کیف پول</h3>
+            </div>
+            <div class="panel panel-info">
+                <div class="panel-heading"><strong>کیفا پول کاربر</strong></div>
+                <div class="panel-body">
+                    <p>موجودی کیف پول <span> <?php echo $user_wallet ?> </span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
