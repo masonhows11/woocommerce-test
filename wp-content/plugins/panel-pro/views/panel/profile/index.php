@@ -7,6 +7,7 @@
                 <h3 class="box-title">فرم ویرایش اطلاعات</h3>
             </div>
             <!-- /.box-header -->
+            <?php echo $message ?>
             <!-- form start -->
             <form action="" method="post" class="form-horizontal">
                 <div class="box-body">
