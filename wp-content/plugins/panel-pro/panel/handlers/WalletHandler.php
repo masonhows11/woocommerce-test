@@ -1,10 +1,12 @@
 <?php
 
 include "Handler.php";
-include  UPP_DIR.'view.class.php';
-include UPP_DIR.'/services/UserService.php';
-include_once UPP_DIR .'/utility/Currency.php';
-class WalletHandler extends Handler{
+include UPP_DIR . 'view.class.php';
+include UPP_DIR . '/services/UserService.php';
+include_once UPP_DIR . '/utility/Currency.php';
+
+class WalletHandler extends Handler
+{
 
     public function __construct()
     {
@@ -13,6 +15,11 @@ class WalletHandler extends Handler{
 
     public function index()
     {
+        if ($this->hasAction()) {
+            $this->performActions();
+            return;
+        }
+
 
         $currency = new Currency();
         $user_service = new UserService();
@@ -21,6 +28,11 @@ class WalletHandler extends Handler{
         // we access to variable in every-where
         // compact('user_wallet');
 
-        view::load('panel.wallet.index',compact('user_wallet'));
+        view::load('panel.wallet.index', compact('user_wallet'));
+    }
+
+    public function payForWallet()
+    {
+        view::load('panel.wallet.payForWallet');
     }
 }
